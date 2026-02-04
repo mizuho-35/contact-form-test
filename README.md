@@ -3,19 +3,8 @@ contact-form
 
 ## 環境構築
 - Dockerのビルドからマイグレーション、シーディングまでを記述する
-1.laravel/contact-form-testにてディレクトリの作成
-contact-form-test
-├── docker
-│   ├── mysql
-│   │   ├── data
-│   │   └── my.cnf
-│   ├── nginx
-│   │   └── default.conf
-│   └── php
-│       ├── Dockerfile
-│       └── php.ini
-├── docker-compose.yml
-└── src
+1.dockerのビルド
+  docker compose up -d --build
 
 2.新規リポジトリの作成
 
