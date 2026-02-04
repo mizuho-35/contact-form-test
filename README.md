@@ -5,8 +5,17 @@ contact-form
 - Dockerのビルドからマイグレーション、シーディングまでを記述する
 1.dockerのビルド
   docker compose up -d --build
+2.Laravelインストール
+  docker-compose exec php bash
+　composer -v
+　composer create-project "laravel/laravel=8.*" . --prefer-dist
+　ls
+3.時間設定の編集
+4.マイグレーションファイルの作成
+  php artisan make:migration create_contacts_table
+  php artisan make:migration categories_table
+  php artisan make:migration users_contacts_table
 
-2.新規リポジトリの作成
 
 
 ## 使用技術（実行環境）
