@@ -1,5 +1,4 @@
-# アプリケーション名
-contact-form
+# contact-form
 
 ## 環境構築
 - Dockerのビルドからマイグレーション、シーディングまでを記述する
@@ -19,7 +18,7 @@ contact-form
 　マイグレーションファイル記入後、実行する
   php artisan migrate
 6.シーダファイルの作成
-  php artisan make:seeder CategoriesTableSeeder
+  php artisan make:seeder ContactsTableSeeder
 7.シーディングの実行
   シーダファイル記入後、実行する
   php artisan db:seed
