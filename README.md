@@ -18,7 +18,7 @@
 　マイグレーションファイル記入後、実行する
   php artisan migrate
 6.シーダファイルの作成
-  php artisan make:seeder ContactsTableSeeder
+  php artisan make:seeder CategoriesTableSeeder
 7.シーディングの実行
   シーダファイル記入後、実行する
   php artisan db:seed
