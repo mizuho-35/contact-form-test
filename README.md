@@ -30,11 +30,7 @@
 • Laravel Framework: 8.83.29  
 
 ## ER図
-<img width="480" height="410" alt="index drawio" src="https://github.com/user-attachments/assets/ca77be15-bfcd-459a-b940-07314c2f376f" />
-
-
-
-
+<img width="480" height="410" alt="index drawio" src="https://github.com/user-attachments/assets/65413de3-4b10-482b-ac4b-648c3588c3fb" />
 
 ## URL
 ・開発環境: http://localhost/  
