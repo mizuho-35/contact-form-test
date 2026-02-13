@@ -1,0 +1,212 @@
+.contact-form__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+.contact-form__heading h2{
+    font-weight: normal;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #8b7969;
+}
+
+.form {
+    color: #8b7969;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+}
+
+.form__group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.form__group-title {
+    padding-top: 10px;
+}
+
+.form__label--required {
+    color: #ff0000;
+}
+
+.form__group-content {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    align-items: center;
+}
+
+.form__input--name {
+    width: 45%;
+}
+
+.form__input--text {
+    appearance: none;
+}
+
+.form__input--text input {
+    height: 35px;
+    margin: 0 auto;
+    padding-left: 30px;
+    appearance: none;
+    font-family: inherit;
+    background-color: #f4f4f4;
+    color: #8b7969;
+    border: none;
+    width: 100%;
+    outline: none;
+}
+
+.form__input--gender {
+    padding-top: 10px;
+}
+
+.form__input--radio {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.gender__item {
+    display: flex;
+    align-items: center;
+    margin-right: 70px;
+}
+
+.gender__label {
+    margin-left: 10px;
+}
+
+/* デフォルトのラジオボタンを消す */
+.gender__item input[type="radio"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #8b7969;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+/* 選択されたときに丸を塗りつぶす */
+.gender__item input[type="radio"]:checked {
+    background-color: #8b7969;
+    border-color: #8b7969;
+}
+
+.form__input--email {
+    width: 100%;
+}
+
+.form__input--tel-group {
+    width: 100%;
+}
+
+.form__input--tel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form__input--tel-item {
+    width: 30%;
+}
+
+.form__input--tel-item input {
+    height: 35px;
+    width: 100%;
+    margin: 0 auto;
+    appearance: none;
+    font-family: inherit;
+    background-color: #f4f4f4;
+    color: #8b7969;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+.form__input--address {
+    width: 100%;
+}
+
+.form__input--building {
+    width: 100%;
+}
+
+.form__select {
+    width: 100%;
+}
+
+.form__select--text {
+    width: 50%;
+    position: relative;
+    height: 35px;
+}
+
+.form__select--text select {
+    width: 100%;
+    height: 35px;
+    padding-left: 30px;
+    appearance: none;
+    font-family: inherit;
+    background-color: #f4f4f4;
+    color: #beb1a7;
+    border: none;
+    outline: none;
+}
+
+.form__select--text::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-25%);
+    border: 10px solid transparent;
+    border-top: 10px solid #beb1a7;
+}
+
+.form__input--textarea {
+    width: 100%;
+}
+
+.form__input--text textarea {
+    height: 100px;
+    margin: 0 auto;
+    padding: 10px 30px;
+    appearance: none;
+    font-family: inherit;
+    background-color: #f4f4f4;
+    color: #8b7969;
+    border: none;
+    width: 100%;
+    outline: none;
+    resize: none;
+}
+
+.form__error {
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
+    width: 100%;
+}
+
+.form__button {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.form__button-submit {
+    height: 50px;
+    width: 20%;
+    margin: 0 auto;
+    appearance: none;
+    font-family: inherit;
+    font-size: 16px;
+    background-color: #82766a;
+    color: #fff;
+    border: none;
+}
