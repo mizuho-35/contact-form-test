@@ -1,24 +1,47 @@
 # contact-form
-
 ## 環境構築
-1.dockerのビルド  
-    git clone リンク  
-    docker compose up -d --build  
-※MySQLは、OSによって起動しない場合があるため、それぞれのPCに合わせてdocker-compose.ymlファイルを編集してください  
-2.PHPコンテナに移動して、Laravelをインストールする  
-    docker compose exec php bash  
-    composer -v  
-    composer create-project "laravel/laravel=8.*" . --prefer-dist  
-    ls 
-3..env.exampleファイルから.envを作成し、県境変数を変更  
-4.キーを作成  
-    php artisan key:generate  
-5.マイグレーションの実行  
-    php artisan migrate  
-6.シーダの実行する  
-    php artisan db:seed  
+### DOckerビルド
+1. `git clone git@github.com:mizuho-35/contact-form-test.git`
+2. `cd contact-form-test` ←クローンしたフォルダに移動
+3. `docker-compose up -d --build`
+- MacのM1・M2チップのPCの場合、`no matching manifest for linux/arm64/v8 in the manifest list entries`のメッセージが表示されビルドができない場合があります。 エラーが発生する場合は、docker-compose.ymlファイルの「mysql」内に「platform」の項目を追加して記載してください
 
+```
+mysql:
+    platform: linux/x86_64
+    image: mysql:8.0.26
+    environment:
+```
+4. .env以下の環境変数を追加
+```
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=laravel_db
+DB_USERNAME=laravel_user
+DB_PASSWORD=laravel_pass
 
+MAIL_MAILER=smtp
+MAIL_HOST=mailhog
+MAIL_PORT=1025
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS="test@example.com"
+MAIL_FROM_NAME="${APP_NAME}"
+```
+5. アプリケーションキーの作成
+```
+php artisan key:generate
+```
+6. マイグレーションファイルの実行
+```
+php artisan migrate
+```
+7. シーディングの実行
+```
+php artisan db:seed
+```
 ## 使用技術（実行環境）
 ・nginx:1.21. 80:80  
 ・php 8.1.34  
